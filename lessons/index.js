@@ -25,3 +25,14 @@ btn2.addEventListener("click", () => {
 /* Priorities */
 /* <div> > #id > .class > baliseHTML */
 /* !important */
+
+//-------------------------------------------
+// Mouse Events
+
+const mousemove = document.querySelector(".mousemove");
+
+console.log(mousemove);
+
+window.addEventListener("mousemove", (e) => {
+  console.log(e.target);
+});
