@@ -9,6 +9,7 @@
     margin: 0;
     color: white;
     min-height: 200vh;
+    overflow-x: hidden;
   }
   
   .box {
@@ -44,4 +45,8 @@
     border-radius: 50px;
     border: 2px solid pink;
     position: absolute;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease;
+    z-index: -1;
   }
+  
