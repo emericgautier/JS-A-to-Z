@@ -86,3 +86,19 @@ document.addEventListener("keypress", (e) => {
   }
   if (e.key === "z") ring(e.key);
 });
+
+//-------------------------------------------
+// scroll event
+
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  // console.log("it works!");
+  // console.log(window.scrollY);
+
+  if (window.scrollY > 120) {
+    nav.style.top = "0";
+  } else {
+    nav.style.top = "-50px";
+  }
+});
