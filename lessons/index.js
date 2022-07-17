@@ -31,7 +31,7 @@ btn2.addEventListener("click", () => {
 
 const mousemove = document.querySelector(".mousemove");
 
-console.log(mousemove);
+// console.log(mousemove);
 
 window.addEventListener("mousemove", (e) => {
   mousemove.style.left = e.pageX + "px";
@@ -58,4 +58,31 @@ questionContainer.addEventListener("mouseout", () => {
 
 response.addEventListener("mouseover", () => {
   response.style.transform = "rotate(-2deg)";
+});
+
+//-------------------------------------------
+// KeyPress event
+
+const keypressContainer = document.querySelector(".keypress");
+const key = document.getElementById("key");
+
+const ring = (key) => {
+  const audio = new Audio();
+  // audio.src = "./z.mp3";
+  audio.src = key + ".mp3";
+  audio.play();
+};
+
+document.addEventListener("keypress", (e) => {
+  // console.log(e);
+  key.textContent = e.key;
+
+  if (e.key === "j") {
+    keypressContainer.style.background = "pink";
+  } else if (e.key === "h") {
+    keypressContainer.style.background = "teal";
+  } else {
+    keypressContainer.style.background = "red";
+  }
+  if (e.key === "z") ring(e.key);
 });
