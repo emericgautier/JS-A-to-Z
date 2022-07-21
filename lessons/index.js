@@ -232,11 +232,11 @@ setTimeout(() => {
 //   `;
 // }, 1000);
 
-document.body.addEventListener("click", (e) => {
-  // console.log(e.target);
-  e.target.remove(); // retirer un élément du DOM
-  clearInterval(interval);
-});
+// document.body.addEventListener("click", (e) => {
+//   console.log(e.target);
+//   e.target.remove(); // retirer un élément du DOM
+//   clearInterval(interval);
+// });
 
 // Location (utile pour rediriger vers des liens...)
 // console.log(location.href);
@@ -281,3 +281,10 @@ document.body.addEventListener("click", (e) => {
 // history.go(-2);
 
 //-------------------------------------------
+// SetProperty
+
+window.addEventListener("mousemove", (e) => {
+  // console.log(e);
+  nav.style.setProperty("--x", e.layerX + "px");
+  nav.style.setProperty("--y", e.layerY + "px");
+});
