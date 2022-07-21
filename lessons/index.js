@@ -126,7 +126,7 @@ select.addEventListener("input", (e) => {
 
 form.addEventListener("submit", (e) => {
   // console.log("yes!");
-  e.preventDefault();
+  e.preventDefault(); // se prémunir comportement par défaut du formulaire (contre le rechargement de la page)
 
   // console.log(cgv.checked);
 
@@ -160,3 +160,124 @@ boxes.forEach((box) => {
     e.target.style.transform = "scale(0.7)";
   });
 });
+
+//-------------------------------------------
+// addEventListener Vs onclick
+
+// document.body.onscroll = function () {
+//   console.log("it works!");
+// };
+
+// document.body.onclick = () => {
+//   console.log("click !");
+// };
+
+// Bubbling => (de base l'eventlistener est paramétré en mode Bublbing)
+document.body.addEventListener("click", () => {
+  console.log("click 1");
+});
+
+// Usecapture
+document.body.addEventListener(
+  "click",
+  () => {
+    console.log("click 2");
+  },
+  true
+);
+
+// https://gomakethings.com/what-is-that-third-argument-on-the-vanilla-js-addeventlistener-method-and-when-do-you-need-it/
+
+//-------------------------------------------
+// Stop propagation
+
+questionContainer.addEventListener("click", (e) => {
+  // alert("Test 2 !");
+  e.stopPropagation(); // next event isn't trigger (click 1)
+});
+
+// removeEventListener
+
+//-------------------------------------------
+// BOM
+
+// console.log(window.innerHeight);
+// console.log(window.scrollY);
+// window.open("http://google.com", "cours js", "height=600, width=800");
+// window.close()
+
+// Evénements adossés à Window
+// alert("hello");
+
+// confirm
+btn2.addEventListener("click", () => {
+  confirm("voulez-vous vraiment vous tromper ?");
+});
+
+// prompt
+btn1.addEventListener("click", () => {
+  let answer = prompt("Entrez votre nom");
+
+  questionContainer.innerHTML += "<h3>Bravo " + answer + "</h3>";
+});
+
+// timer compte à rebours
+setTimeout(() => {
+  questionContainer.style.borderRadius = "300px";
+}, 2000);
+
+// let interval = setInterval(() => {
+//   document.body.innerHTML += `
+//   <div class='box'><h2>Nouvelle Boite !</h2></div>
+//   `;
+// }, 1000);
+
+document.body.addEventListener("click", (e) => {
+  // console.log(e.target);
+  e.target.remove(); // retirer un élément du DOM
+  clearInterval(interval);
+});
+
+// Location (utile pour rediriger vers des liens...)
+// console.log(location.href);
+// console.log(location.host);
+// console.log(location.pathname);
+// console.log(location.search);
+// location.replace("http://lequipe.fr");
+
+// window.onload = () => {
+//   location.href = "http://google.fr";
+// };
+
+// Navigator
+// console.log(navigator.userAgent);
+
+// https://developer.mozilla.org/fr/docs/Web/API/Geolocation/getCurrentPosition
+
+// var options = {
+//   enableHighAccuracy: true,
+//   timeout: 5000,
+//   maximumAge: 0,
+// };
+
+// function success(pos) {
+//   var crd = pos.coords;
+
+//   console.log("Votre position actuelle est :");
+//   console.log(`Latitude : ${crd.latitude}`);
+//   console.log(`Longitude : ${crd.longitude}`);
+//   console.log(`La précision est de ${crd.accuracy} mètres.`);
+// }
+
+// function error(err) {
+//   console.warn(`ERREUR (${err.code}): ${err.message}`);
+// }
+
+// navigator.geolocation.getCurrentPosition(success, error, options);
+
+// History
+// console.log(history);
+// window.history.back();
+// history.go(-2);
+
+//-------------------------------------------
