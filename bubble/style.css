@@ -8,10 +8,10 @@ body {
     border-radius: 300px;
     background: rgba(255, 166, 0, 0.6);
     opacity: 0;
-    -webkit-animation: anim 8s forwards;
-            animation: anim 8s forwards;
-    -webkit-filter: hue-rotate(0);
-            filter: hue-rotate(0deg);
+            -webkit-animation: anim 8s forwards;
+                    animation: anim 8s forwards;
+            -webkit-filter: hue-rotate(0deg);
+                    filter: hue-rotate(0deg);
 }
 
 @-webkit-keyframes anim {
@@ -27,8 +27,16 @@ to {
 @keyframes anim {
 to {
     top: -250px;
+    left: var(--left);
     opacity: 1;
     -webkit-filter: hue-rotate(720deg);
             filter: hue-rotate(720deg);
 }
+}
+
+h3 {
+    font-size: 10rem;
+    text-align: center;
+    color: lightgrey;
+    margin-top: 20px;
 }
