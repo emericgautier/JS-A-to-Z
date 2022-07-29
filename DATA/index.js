@@ -21,7 +21,7 @@ let object = {
 };
 
 // ajouter un élément dans un objet
-// object.adesse = "22 Rue du Code";
+// object.adresse = "22 Rue du Code";
 
 // mettre à jour une valeur
 // object.age = 35;
