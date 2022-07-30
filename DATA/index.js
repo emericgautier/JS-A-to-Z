@@ -50,3 +50,68 @@ let data = [
   },
 ];
 // console.log(data[2].technos[1]);
+
+//---------------------------
+// Les structures de controle
+//---------------------------
+
+if (data[0].age > data[1].age) {
+  // console.log(data[0].pseudo + " est plus agé que " + data[1].pseudo);
+} else {
+  // valeur si faux
+}
+
+// sur une seule ligne
+// if (data[0].age > data[1].age) console.log("yes!");
+
+// ternaire sur une ligne
+// data[0].age > data[1].age ? console.log("yes!") : console.log("is not");
+
+// While
+let w = 0;
+
+while (w < 10) {
+  w++;
+  // console.log("La valeur de w est de " + w);
+}
+
+// Do while
+let d = 0;
+
+do {
+  d++;
+  // console.log(d);
+} while (d < 5);
+
+// Les boucles for
+
+for (const user of data) {
+  // document.body.innerHTML += `<li>${user.pseudo} - ${user.age} ans</li>`;
+}
+
+// console.log(data.length);
+
+// on déclare la valeur de i | jusqu'où on boucle | on incrémente i si la condition 2 n'est pas remplie
+for (i = 0; i < data.length; i++) {
+  // console.log(i);
+  // console.log(data[i].technos[0]);
+  // document.body.innerHTML += "<h2>" + data[i].technos.join(" / ") + "</h2";
+}
+
+// Switch
+document.body.addEventListener("click", (e) => {
+  console.log(e.target.id);
+  switch (e.target.id) {
+    case "javascript":
+      document.body.style.background = "yellow";
+      break;
+    case "php":
+      document.body.style.background = "violet";
+      break;
+    case "python":
+      document.body.style.background = "blue";
+      break;
+    default:
+      null;
+  }
+});
