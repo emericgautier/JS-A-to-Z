@@ -103,13 +103,13 @@ document.body.addEventListener("click", (e) => {
   console.log(e.target.id);
   switch (e.target.id) {
     case "javascript":
-      document.body.style.background = "yellow";
+      document.body.style.background = "#EBD31C";
       break;
     case "php":
-      document.body.style.background = "violet";
+      document.body.style.background = "#7175AA";
       break;
     case "python":
-      document.body.style.background = "blue";
+      document.body.style.background = "#3371A2";
       break;
     default:
       null;
