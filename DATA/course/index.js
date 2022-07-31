@@ -161,3 +161,40 @@ let numberString = "42.12 est un chiffre";
 // console.log(Math.sqrt(16)); // 4 (square)
 
 // console.log(Math.floor(Math.random() * 50)); // à retenir
+//-----------------
+// Méthodes Arrays
+//-----------------
+
+// Créer 2 tableaux
+let array3 = ["Javascript", "Php", "Python"];
+let array4 = ["Ruby", "Solidity"];
+
+// let newArray = array3.concat(array4); // fusionner 2 tableaux
+// console.log(newArray);
+
+// let newArray = [...array3, ...array4]; // spread operator (fusionner 2 tableaux)
+// console.log(newArray);
+
+// casser le tableau, faire une chaine de caractère, très utilisé
+// console.log(array3.join(" / "));
+
+// console.log(array3.slice(1));
+// console.log(newArray.slice(3, 5));
+
+// console.log(array3.indexOf("Python"));
+
+// array3.forEach((languages) => console.log(languages)); // énumérer les éléments du tableau un par un
+
+// console.log(array3.every((language) => language == "Php")); // false (php n'est pas trouvé à chaque boucle)
+// console.log(array3.some((language) => language == "Php")); // true (php trouvé dans le tableau)
+
+// let shift = array3.shift(); // suprime le 1er élément (Javascript)
+// console.log(array3);
+
+// console.log(array3.pop()); // suprime le dernier élément (python)
+
+// const restArray = array3.splice(0, 2, "c++"); // de 0 à 2 tu enlèves ces éléments, et remplace par "c++"
+// console.log(array3);
+
+// const restArray = array3.splice(0, 2, ...array4); // de 0 à 2 tu enlèves ces éléments, et fusionne array4
+// console.log(array3);
