@@ -1,7 +1,7 @@
 // Rappel des types de données
 let string = "chaine";
 let number = 25;
-let cool = true;
+let boolean = true;
 let maVariable; // type Undefined
 // console.log(typeof boolean);
 
@@ -115,3 +115,29 @@ document.body.addEventListener("click", (e) => {
       null;
   }
 });
+
+//----------------
+// Méthodes String
+//----------------
+let string2 = "Javascript est un langage orienté objet";
+
+// console.log(typeof "42");
+// console.log(eval(parseInt("1") + 2));
+// console.log(isNaN(string2));
+
+// console.log(string2.length);
+// console.log(string2[string2.length - 1]);
+
+// console.log(string2.indexOf("langage")); // 18
+// console.log(string2.indexOf("x")); // Retourne -1 s'il ne le connait pas
+
+// let newString = string2.slice(18);
+// let newString = string2.slice(5, 20);
+// console.log(newString);
+
+// console.log(string2.split(" "));
+
+// console.log(string2.toLocaleLowerCase());
+// console.log(string2.toUpperCase());
+
+// console.log(string2.replace("Javascript", "PHP"));
