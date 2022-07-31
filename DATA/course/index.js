@@ -198,3 +198,22 @@ let array4 = ["Ruby", "Solidity"];
 
 // const restArray = array3.splice(0, 2, ...array4); // de 0 à 2 tu enlèves ces éléments, et fusionne array4
 // console.log(array3);
+
+//-------- IMPORTANT ---------//
+let arrayNumber = [4, 74, 28, 12, 1];
+// console.log(arrayNumber.reduce((x, y) => x + y)); //methode pour additionner des éléments, des tableaux
+arrayNumber.push(17); // ajouter des éléments à un tableau (number, string, boolean...)
+// console.log(arrayNumber);
+
+// FILTER, SORT, MAP (filtrer, trier, lister(even better than "forEach"))
+
+// console.log(arrayNumber.filter((number) => number > 10)); // appeler 'number' à chaque tour de boucle
+// console.log(arrayNumber.sort());
+// console.log(arrayNumber.sort((a, b) => a - b)); // ordre croissant, inversement en décroissant b - a
+// console.log(arrayNumber.filter((number) => number > 10).sort((a, b) => a - b)); // combine filter & sort
+
+arrayNumber.map((number) => console.log(number)); // énumérer les number à chaque tour de boucle
+// arrayNumber.map((number) => (document.body.innerHTML += `<li>${number}</li>`)); // barbare
+document.body.innerHTML += arrayNumber
+  .map((number) => `<h6>${number}</h6>`)
+  .join("");
