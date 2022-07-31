@@ -215,5 +215,5 @@ arrayNumber.push(17); // ajouter des éléments à un tableau (number, string, b
 arrayNumber.map((number) => console.log(number)); // énumérer les number à chaque tour de boucle
 // arrayNumber.map((number) => (document.body.innerHTML += `<li>${number}</li>`)); // barbare
 document.body.innerHTML += arrayNumber
-  .map((number) => `<h6>${number}</h6>`)
-  .join("");
+  .map((number) => `<span>${number}</span>`)
+  .join(" • ");
