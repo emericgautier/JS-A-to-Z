@@ -212,8 +212,28 @@ arrayNumber.push(17); // ajouter des éléments à un tableau (number, string, b
 // console.log(arrayNumber.sort((a, b) => a - b)); // ordre croissant, inversement en décroissant b - a
 // console.log(arrayNumber.filter((number) => number > 10).sort((a, b) => a - b)); // combine filter & sort
 
-arrayNumber.map((number) => console.log(number)); // énumérer les number à chaque tour de boucle
-// arrayNumber.map((number) => (document.body.innerHTML += `<li>${number}</li>`)); // barbare
-document.body.innerHTML += arrayNumber
-  .map((number) => `<span>${number}</span>`)
-  .join(" • ");
+// arrayNumber.map((number) => console.log(number)); // énumérer les number à chaque tour de boucle
+// // arrayNumber.map((number) => (document.body.innerHTML += `<li>${number}</li>`)); // barbare
+// document.body.innerHTML += arrayNumber
+//   .map((number) => `<span>${number}</span>`)
+//   .join(" • ");
+
+//-----------------
+// Méthodes Objects
+//-----------------
+
+document.body.innerHTML += data
+  // .filter((user) => user.admin === false)
+  .filter((user) => user.pseudo.includes("a"))
+  .sort((a, b) => b.age - a.age)
+  .map(
+    (user) => `
+<div class="user-card">
+<h2>${user.pseudo}</h2>
+<p>Age : ${user.age} ans</p>
+<p>Status : ${user.admin ? "Modérateur" : "Membre"}</p>
+</div>
+
+`
+  )
+  .join("");
