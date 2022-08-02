@@ -36,7 +36,7 @@ function generatePassword() {
 
   setTimeout(() => {
     generateButton.textContent = "Générer mot de passe";
-  }, 200 0);
+  }, 2000);
 
   // console.log("Je génère un mot de passe");
 }
