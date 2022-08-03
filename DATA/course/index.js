@@ -267,3 +267,41 @@ function dateParser(chaine) {
 // console.log(dateParser(date));
 // console.log(dateParser(timestamp));
 // console.log(dateParser(iso));
+
+//--------------
+// Destructuring
+//--------------
+// permet d'aller plus vite, avoir un code plus propre
+
+let moreData = {
+  destVar: ["element 1", "element 2"],
+};
+
+// shortcut, accès au tabeau
+const { destVar } = moreData; // equivalent const destVar = moreData.destVar;
+
+// console.log(moreData.destVar);
+// console.log(destVar);
+
+let array5 = [70, 80, 90];
+// isoler les données d'un tableau dans une variable
+// console.log(array5[0]);
+// console.log(array5[1]);
+// console.log(array5[2]);
+
+let [x, y, z] = array5;
+// console.log(x);
+// console.log(y);
+// console.log(z);
+
+// console.log(iso);
+// passer chaine à modifier, à la place la date 'iso'
+const dateDestructuring = (chaine) => {
+  let newDate = chaine.split("T")[0];
+  // console.log(newDate.split("-")); // casser la chaine de caractère
+  let [y, m, d] = newDate.split("-"); // enlève les tirets
+  return [d, m, y].join("/");
+  // [y, a, d] = newDate;
+  // console.log(newDate); // on a un tableau de 2 élément, le T à disparu, [0] pour garder que l'avant T (isoler les données)
+};
+// console.log(dateDestructuring(iso)); // appel la fonction, et lui passe la variable
