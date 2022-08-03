@@ -222,18 +222,48 @@ arrayNumber.push(17); // ajouter des éléments à un tableau (number, string, b
 // Méthodes Objects
 //-----------------
 
-document.body.innerHTML += data
-  // .filter((user) => user.admin === false)
-  .filter((user) => user.pseudo.includes("a"))
-  .sort((a, b) => b.age - a.age)
-  .map(
-    (user) => `
-<div class="user-card">
-<h2>${user.pseudo}</h2>
-<p>Age : ${user.age} ans</p>
-<p>Status : ${user.admin ? "Modérateur" : "Membre"}</p>
-</div>
+// document.body.innerHTML += data
+//   // .filter((user) => user.admin === false)
+//   .filter((user) => user.pseudo.includes("a"))
+//   .sort((a, b) => b.age - a.age)
+//   .map(
+//     (user) => `
+// <div class="user-card">
+// <h2>${user.pseudo}</h2>
+// <p>Age : ${user.age} ans</p>
+// <p>Status : ${user.admin ? "Modérateur" : "Membre"}</p>
+// </div>
 
-`
-  )
-  .join("");
+// `
+//   )
+//   .join("");
+
+//-----------------
+// Les dates
+//-----------------
+
+// Date classique
+let date = new Date(); //crée un nouvel objet new Date()
+// console.log(date);
+
+// Timestamp
+let timestamp = Date.parse(date); // transforme une date js en Timestamp // parse est une methode qui appartient à l'objet date
+// console.log(timestamp);
+
+// IsoString
+// console.log(date.toISOString());
+let iso = date.toISOString();
+
+function dateParser(chaine) {
+  let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  });
+  return newDate;
+}
+// console.log(dateParser(date));
+// console.log(dateParser(timestamp));
+// console.log(dateParser(iso));
