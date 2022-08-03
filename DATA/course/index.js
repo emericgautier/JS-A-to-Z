@@ -317,3 +317,27 @@ const h3 = document.querySelectorAll("h3");
 // console.log(h3);
 
 // h3.forEach((language) => console.log(language.dataset.lang));
+
+//----------
+// Les Regex
+//----------
+
+let mail = "from_scratch33@gmail.com";
+// console.log(mail.search(/frscceeceom/));
+
+// console.log(mail.replace(/from/, "de"));
+// console.log(mail.match(/SCratch/i)); // n'est plus 'case sensitive', true, avec la MAJ
+// console.log(mail.match(/[zug]/)); // chercher si la lettre z u g figure dans l'email
+// console.log(mail.match(/[12]/));
+
+// Tous les chiffres
+// console.log(mail.match(/\d/)); // vérifier si il y a un chiffre
+
+// Matcher toutes les lettres
+// console.log(mail.match(/[a-z]/)); // dès qu'il y a une lettre, 'f' true
+
+// console.log(mail.match(/^[\w_-]+@[\w-]+\.[a-z]{2,4}$/i)); //controler un mail \w veut dire tous les chiffres ou lettres
+
+//separateur de millier
+let separator = 265264849;
+// console.log(separator.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
