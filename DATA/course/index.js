@@ -305,3 +305,15 @@ const dateDestructuring = (chaine) => {
   // console.log(newDate); // on a un tableau de 2 élément, le T à disparu, [0] pour garder que l'avant T (isoler les données)
 };
 // console.log(dateDestructuring(iso)); // appel la fonction, et lui passe la variable
+
+//-------------
+// Les Datasets
+//-------------
+
+const h3js = document.getElementById("javascript");
+// console.log(h3js.dataset.lang);
+
+const h3 = document.querySelectorAll("h3");
+// console.log(h3);
+
+// h3.forEach((language) => console.log(language.dataset.lang));
