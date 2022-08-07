@@ -1,4 +1,6 @@
-# JAVASCRIPT
+# Javascript
+
+Javascript de A à Z.
 
 ## Le DOM
 
