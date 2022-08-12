@@ -1,0 +1,38 @@
+{
+    "workbench.colorTheme": "One Dark Pro",
+    "editor.fontSize": 15,
+    "git.autofetch": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "git.enableSmartCommit": true,
+    "git.ignoreRebaseWarning": true,
+    "diffEditor.renderSideBySide": false,
+    "liveServer.settings.donotVerifyTags": true,
+    "git.confirmSync": false,
+    "workbench.editor.untitled.hint": "hidden",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "editor.formatOnSave": true,
+    "[html]": {
+      "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "autoprefixer.formatOnSave": true,
+    "diffEditor.wordWrap": "off",
+    "editor.wordWrap": "on",
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "window.zoomLevel": -1,
+    "workbench.startupEditor": "none",
+    "explorer.confirmDelete": false,
+    "json.schemas": [
+    
+    ]
+  }
+  
