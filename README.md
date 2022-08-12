@@ -36,3 +36,19 @@ Javascript de A à Z.
 - Les datasets
 - Les Regex
 - Projet - Form Checker
+
+## Les API
+
+- Intro
+- Qu'est ce qu'une API
+- XMLHttpRequest
+- Fetch
+- Projet : Générateur de blagues
+- Les options de requête
+- Méthodes POST, PUT, DELETE
+- L'asynchrone
+- Projet - Api User
+- Le JSON
+- Local Storage / Session Storage
+- Les cookies
+- Projet - Cooking App
