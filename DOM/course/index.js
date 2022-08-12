@@ -1,3 +1,4 @@
+// DOM
 // SELECTEURS
 // document.querySelector("").style.background = "yellow";
 // const baliseHTML = document.querySelector("h4");

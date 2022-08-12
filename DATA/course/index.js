@@ -1,3 +1,4 @@
+// DATA
 // Rappel des types de données
 let string = "chaine";
 let number = 25;
