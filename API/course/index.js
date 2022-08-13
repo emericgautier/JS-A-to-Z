@@ -72,12 +72,12 @@ document.querySelector("form").addEventListener("submit", () => {
 
 // attendre avant d'exécuté le code
 setTimeout(() => {
-  console.log("test"); // loggé 2s après l'avoir appelé
+  // console.log("test"); // loggé 2s après l'avoir appelé
 }, 2000);
 
 // Promise
 // avec la methode then
-fetch("monlien").then((res) => res); // then... ne sera exécuté, après que fetch('monlien') 'aller chercher les choses sur un serveur distant, que lorsqu'on aura un retour, des données, then tu me fais ça, then....
+// fetch("monlien").then((res) => res); // then... ne sera exécuté, après que fetch('monlien') 'aller chercher les choses sur un serveur distant, que lorsqu'on aura un retour, des données, then tu me fais ça, then....
 
 // async/await
 async function fetchData() {
@@ -92,3 +92,19 @@ const fetchData2 = async () => {
 
   executeFunction();
 };
+
+//-----------------------
+// Le JSON
+//-----------------------
+// format pour faire transiter des données
+
+// methode .json() => qui s'auto-résout en renvoyant le body de la requête (fetch...) Transforme de façon  à ce que le body de la réponse soit lisible au format, et compréhensible par js. Ensuite on transforme le .json pour être interprété
+
+// comment on convertit en JSON / comment convertit en objet JS
+fetch("data.json")
+  .then((res) => res.json()) // la plus importante quand on fait des requête à des API
+  .then((data) => {
+    let settings = JSON.stringify(data); // stringify => convertit en JSON
+    // parse transforme json en objet js, difference les index ne sont pas entre ""
+    // console.log(JSON.parse(settings));
+  });
