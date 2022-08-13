@@ -31,6 +31,37 @@ fetch("data.txt").then((res) => res.text());
 //   .then((data) => console.log(data));
 
 // traiter cette data, appliquer une methode res.json, pour permettre de lire cette donnée, ce que tu as traité en .json je l'appel data
-fetch("data.json")
-  .then((res) => res.json())
-  .then((data) => console.log(data));
+fetch("data.json").then((res) => res.json());
+// .then((data) => console.log(data));
+
+const myHeaders = new Headers(); // va me chercher un objet JS
+const init = {
+  method: "GET", // on demande des données
+  headers: myHeaders,
+  mode: "cors", // gère les permissions
+  cache: "default",
+};
+
+// fetch("data.json", init).then((res) => console.log(res));
+
+// les methodes les plus populaire, y en a d'autre...
+// CRUD => Create (POST), read (GET), update (PUT), delete (DELETE)
+
+const init2 = {
+  method: "POST", // incrémenter des données dans la bdd
+  headers: { "Content-Type": "application/json" }, // .json
+  body: JSON.stringify({
+    // je vais te passer en body pseudo, age
+    pseudo: "From Scratch",
+    age: 25,
+  }),
+  mode: "cors",
+  Credentials: "same-origin",
+};
+
+// quand mon formulaire je le soumet, alors tu me déclenches un POST, de psudo et message
+document.querySelector("form").addEventListener("submit", () => {
+  fetch("http://localhost:3000/users", init2).then(() =>
+    console.log("data envoyée")
+  );
+});
