@@ -65,3 +65,30 @@ document.querySelector("form").addEventListener("submit", () => {
     console.log("data envoyée")
   );
 });
+
+//-----------------------
+// Asynchrone
+//-----------------------
+
+// attendre avant d'exécuté le code
+setTimeout(() => {
+  console.log("test"); // loggé 2s après l'avoir appelé
+}, 2000);
+
+// Promise
+// avec la methode then
+fetch("monlien").then((res) => res); // then... ne sera exécuté, après que fetch('monlien') 'aller chercher les choses sur un serveur distant, que lorsqu'on aura un retour, des données, then tu me fais ça, then....
+
+// async/await
+async function fetchData() {
+  await fetch("monlien"); // attend que le await soit exécuté avant de faire la suite
+
+  executeFunction();
+}
+
+// function fléché, la function démarre après le = , car c'est une variable qui stock une function
+const fetchData2 = async () => {
+  await fetch("monlien");
+
+  executeFunction();
+};
