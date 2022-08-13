@@ -108,3 +108,27 @@ fetch("data.json")
     // parse transforme json en objet js, difference les index ne sont pas entre ""
     // console.log(JSON.parse(settings));
   });
+
+//-----------------------
+// Web API (du navigateur)
+//-----------------------
+
+// CLIENT STORAGE
+//-----------------------
+
+// Local Storage
+localStorage.data = "Je stock la data";
+// document.body.textContent = localStorage.data;
+
+localStorage.removeItem("data");
+
+const obj = {
+  name: "Denis",
+  age: 22,
+};
+
+// Il faut passer des chaines de caractères // convertir l'objet 'obj' en un objet JSON
+// La convertir en objet JSON pour la sauvegarder
+localStorage.user = JSON.stringify(obj);
+
+// console.log(JSON.parse(localStorage.user)); // la convertir en objet js quand on veut l'afficher
