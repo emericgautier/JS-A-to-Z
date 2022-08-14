@@ -141,3 +141,13 @@ localStorage.user = JSON.stringify(obj);
 // sessionStorage.dataSettings = "55px";
 // console.log(sessionStorage.dataSettings);
 sessionStorage.clear();
+
+//-----------------------
+// Cookies
+//-----------------------
+
+// AJouter , donner un index, une valeur
+document.cookie = "username=FromScratch";
+
+// bonne pratique
+document.cookie = "pseudo=FS;path=/; max-age=450000; secure; samesite";
