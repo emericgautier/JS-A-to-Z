@@ -116,7 +116,9 @@ fetch("data.json")
 // CLIENT STORAGE
 //-----------------------
 
+//-----------------------
 // Local Storage
+//-----------------------
 localStorage.data = "Je stock la data";
 // document.body.textContent = localStorage.data;
 
@@ -132,3 +134,10 @@ const obj = {
 localStorage.user = JSON.stringify(obj);
 
 // console.log(JSON.parse(localStorage.user)); // la convertir en objet js quand on veut l'afficher
+
+//-----------------------
+// Session Storage
+//-----------------------
+// sessionStorage.dataSettings = "55px";
+// console.log(sessionStorage.dataSettings);
+sessionStorage.clear();
