@@ -39,8 +39,6 @@ Javascript de A à Z.
 
 ## Les API
 
-- Intro
-- Qu'est ce qu'une API
 - XMLHttpRequest
 - Fetch
 - Projet : Générateur de blagues
