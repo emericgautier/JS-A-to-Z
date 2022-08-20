@@ -50,3 +50,11 @@ Javascript de A à Z.
 - Local Storage / Session Storage
 - Les cookies
 - Projet - Cooking App
+
+## La POO
+
+- Les méthodes des objets
+- Les différents constructeurs d'objets
+- Les prototypes
+- L'héritage
+- Yoga App
