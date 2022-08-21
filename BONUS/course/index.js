@@ -1,3 +1,5 @@
+"use strict"; // version JS moins permissive avec plus d'erreur dans la console
+
 // CANVAS
 //-------
 
@@ -26,3 +28,59 @@ function draw() {
 
 // on se joue cette function quand la page est chargé
 window.addEventListener("load", draw);
+
+//------------
+// TRY / CATCH
+//------------
+
+try {
+  // Test un block de code
+  myFunction();
+} catch (err) {
+  // console.log(err);
+}
+
+function isValidJSON(txt) {
+  try {
+    JSON.parse(txt);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// console.log(isValidJSON());
+
+// Finally
+try {
+  // Test un block de code
+  // myFunction();
+} catch (err) {
+  console.log(err);
+} finally {
+  // console.log("on est arrivé au bout");
+}
+
+// Throw
+function isNumber(num) {
+  if (isNaN(num)) {
+    throw "Not a number !";
+  } else {
+    console.log("c'est un nombre");
+  }
+  // PLEIN DE CODE
+}
+
+try {
+  isNumber("2d");
+  // catch attrappe le throw
+} catch (err) {
+  // console.log("Erreur : " + err); // Not a number
+}
+
+//------------
+// Strict mode
+//------------
+
+voiture = "Toyota"; // index.js:85 Uncaught ReferenceError: voiture is not defined
+console.log(voiture);
