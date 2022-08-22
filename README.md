@@ -58,3 +58,11 @@ Javascript de A à Z.
 - Les prototypes
 - L'héritage
 - Yoga App
+
+## TypeScript
+
+- Variables
+- Tableaux
+- Objets
+- Fonctions
+  +Union, Enum, Tupple...
